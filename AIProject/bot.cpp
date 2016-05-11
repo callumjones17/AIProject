@@ -27,14 +27,14 @@ char *bot::respond(char human_input[], int length){
 	char *match = strstr(input, responses[1][0]);
 	int Response = 0;
 	int Keyword = 1;
-	if (match != NULL){
-		Keyword = 0;
-	}
-	else{
+	if (match != 0){
 		Keyword = 1;
 	}
+	else{
+		Keyword = 0;
+	}
 	srand((unsigned)time(NULL));
-	Response = rand() % MAX_RESPONSES;
+	Response = (rand() % (MAX_RESPONSES))+1;
 	char output[MAX_RESPONSE_LENGTH];
 	int ResponseLength = strlen(responses[Keyword][Response]);
 	for (int i = 0; i < ResponseLength; i++){
