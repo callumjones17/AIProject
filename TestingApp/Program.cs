@@ -28,14 +28,14 @@ namespace TestingApp
             p.Close();
 
 
-            //outputP = outputP.Insert(0, "\"");
-            //outputP = outputP.Insert(outputP.Length - 1, "\"");
+            outputP = outputP.Insert(0, "\"");
+            outputP = outputP.Insert(outputP.Length - 1, "\"");
             Process espeak = new Process();
-            p.StartInfo.FileName = "espeak.exe";
-            p.StartInfo.Arguments = "-ven+mf4"  + outputP;
-            p.Start();
-            p.WaitForExit();
-            p.Close();
+            espeak.StartInfo.FileName = "espeak.exe";
+            espeak.StartInfo.Arguments = "-ven+mf4"  + outputP;
+            espeak.Start();
+            espeak.WaitForExit();
+            espeak.Close();
 
 
             Console.ReadLine();

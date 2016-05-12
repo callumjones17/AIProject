@@ -27,7 +27,9 @@ int main(int argc, char* argv[])
 
 		//cout << ">";
 		//cin >> input;
-		
+	
+	if (argc == 2){
+
 		char *botOut;
 		botOut = chatterBot.respond(argv[1], strlen(argv[1]));
 
@@ -38,7 +40,7 @@ int main(int argc, char* argv[])
 				break;
 			}
 		}
-		
+	
 		char botOut_s[MAX_RESPONSE_LENGTH];
 		for (int i = 0; i < counter; i++){
 			botOut_s[i] = *(botOut + i);
@@ -47,7 +49,8 @@ int main(int argc, char* argv[])
 
 		cout << botOut_s << endl;
 
-	//s}
+		//s}
+	}
 
 	return 0;
 }

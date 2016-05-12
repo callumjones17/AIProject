@@ -15,7 +15,8 @@ bot::~bot()
 
 char responses[MAX_KEYWORDS][MAX_RESPONSES + 1][MAX_RESPONSE_LENGTH] = { 
 { "unknown", "I don't understand.", "I'm confused!", "Do you even english?" },
-{ "hi", "hello", "good morning", "good afternoon" } 
+{ "hi", "Hello", "Good Morning.", "Good Afternoon." },
+{ "you", "I am an AI.","I am a chatbot AI", "Thats enough of me, lets talk about you." }
 };
 
 char *bot::respond(char human_input[], int length){
@@ -24,6 +25,22 @@ char *bot::respond(char human_input[], int length){
 		input[i] = tolower(*(human_input + i));
 	}
 	input[length] = '\0';
+
+	int Response = 0;
+	int Keyword = 1;
+
+	for (int i = 0; i < MAX_KEYWORDS; i++){
+		char *match = strstr(input, responses[i][0]);
+		if (match != 0){
+			Keyword = i;
+			break;
+		}
+		else{
+			Keyword = 0;
+		}
+	}
+
+	/*
 	char *match = strstr(input, responses[1][0]);
 	int Response = 0;
 	int Keyword = 1;
@@ -33,6 +50,7 @@ char *bot::respond(char human_input[], int length){
 	else{
 		Keyword = 0;
 	}
+	*/
 	srand((unsigned)time(NULL));
 	Response = (rand() % (MAX_RESPONSES))+1;
 	char output[MAX_RESPONSE_LENGTH];
