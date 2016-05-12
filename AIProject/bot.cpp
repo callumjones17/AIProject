@@ -16,7 +16,8 @@ bot::~bot()
 char responses[MAX_KEYWORDS][MAX_RESPONSES + 1][MAX_RESPONSE_LENGTH] = { 
 { "unknown", "I don't understand.", "I'm confused!", "Do you even english?" },
 { "hi", "Hello", "Good Morning.", "Good Afternoon." },
-{ "you", "I am an AI.","I am a chatbot AI", "Thats enough of me, lets talk about you." }
+{ "you", "I am an AI.","I am a chatbot AI.", "Thats enough of me, lets talk about you." },
+{"hello","Hi.","Good Morning.","Good Afternoon."}
 };
 
 char *bot::respond(char human_input[], int length){
