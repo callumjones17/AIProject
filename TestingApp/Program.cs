@@ -25,6 +25,19 @@ namespace TestingApp
             string outputP = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
             Console.WriteLine(outputP);
+            p.Close();
+
+
+            //outputP = outputP.Insert(0, "\"");
+            //outputP = outputP.Insert(outputP.Length - 1, "\"");
+            Process espeak = new Process();
+            p.StartInfo.FileName = "espeak.exe";
+            p.StartInfo.Arguments = "-ven+mf4"  + outputP;
+            p.Start();
+            p.WaitForExit();
+            p.Close();
+
+
             Console.ReadLine();
         }
     }

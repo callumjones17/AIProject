@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 {
 
 	bot chatterBot;
-	char input[256] = {};
+	char input[MAX_RESPONSE_LENGTH] = {};
 	bool running = true;
 
 	//cout << "Jone's chatterbot application. No more than 256 characters allowed." << endl;
