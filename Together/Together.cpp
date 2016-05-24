@@ -11,7 +11,7 @@ using namespace std;
 
 
 
-char *getAIResponse(char *stimuli){
+char *getAIResponse(char *stimuli){//, int &func){
 	char *command = "AIProject.exe ";
 	char command_to_send[256] = {};
 	strcat_s(command_to_send, command);
@@ -20,10 +20,15 @@ char *getAIResponse(char *stimuli){
 	strcat_s(command_to_send, "\"");
 	command_to_send[strlen(command_to_send)] = '\0';
 	//cout << command_to_send << endl;
-	char line[MAX_RESPONSE_LENGTH];
+	char line[MAX_RESPONSE_LENGTH] = {};
+	//char otherLine[MAX_RESPONSE_LENGTH] = {};
 	//system(command_to_send);
 	FILE *file = _popen(command_to_send, "r");
 	fgets(line, MAX_RESPONSE_LENGTH, file);
+	//while (fgets(otherLine, MAX_RESPONSE_LENGTH, file));
+	//if (otherLine[0] == 'O' && otherLine[1] == 'p'){
+	//	func = 1;
+	//}
 	_pclose(file);
 	//somehow get text that system returns
 	return line;
