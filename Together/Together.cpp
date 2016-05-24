@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
 
 	while (1){
 
-		cout << ">";
+		cout << ">  ";
 		cin >> firstWord;
 		cin.getline(input, MAX_RESPONSE_LENGTH);
 

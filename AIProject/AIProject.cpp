@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
 
 		cout << botOut_s << endl;
 
-		//s}
+		//}
 	}
 
 	return 0;
