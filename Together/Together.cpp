@@ -34,6 +34,17 @@ char *getAIResponse(char *stimuli){//, int &func){
 	return line;
 }
 
+char* getVoiceInput(){
+	char line[MAX_RESPONSE_LENGTH] = {};
+	char lin2[MAX_RESPONSE_LENGTH] = {};
+	char* command_to_send = "get_speech.exe";
+	FILE *file = _popen(command_to_send, "r");
+	fgets(line, MAX_RESPONSE_LENGTH,file);
+	while (fgets(lin2, MAX_RESPONSE_LENGTH, file));
+	_pclose(file);
+	return line;
+}
+
 void readOutLoud(char *toRead){
 	char *command = "espeak -ven+mf4 ";
 	char command_to_send[256] = {};
@@ -53,20 +64,26 @@ void readOutLoud(char *toRead){
 int main(int argc, char* argv[])
 {
 	char input[256];
-	char firstWord[256];
-	char toSend[256] = {};
+	char firstWord[256];									// comment this out for voice.
+	char toSend[600] = {};
 
 	cout << "Hi"<< endl;
 
 	while (1){
 
+
+		///*													This is the original texting version of the app.
 		cout << ">  ";
 		cin >> firstWord;
 		cin.getline(input, MAX_RESPONSE_LENGTH);
+		//*/
+
+		//char* firstWord = getVoiceInput();			// Uncomment this out for voice
+
 
 		char toSend[256] = {};
 		strcat_s(toSend, firstWord);
-		strcat_s(toSend, input);
+		strcat_s(toSend, input);						// Don't Know why this was causing issues.  //Needed for Texting though
 
 		char *output = getAIResponse(toSend);
 		char output_s[MAX_RESPONSE_LENGTH] = {};
