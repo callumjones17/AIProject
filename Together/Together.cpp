@@ -58,13 +58,23 @@ void readOutLoud(char *toRead){
 	return;
 }
 
+char* GetVoiceInput2ndAttempt(){
+	char *command = "get_speech_diag";
+	char line[MAX_RESPONSE_LENGTH] = {};
+	FILE *file = _popen(command, "r");
+	fgets(line, MAX_RESPONSE_LENGTH, file);
+	_pclose(file);
+	//readOutLoud(line);	// Debugging Only
+	return line;
+}
+
 
 
 
 int main(int argc, char* argv[])
 {
 	char input[256];
-	char firstWord[256];									// comment this out for voice.
+	//char firstWord[256];									// comment this out for voice.
 	char toSend[600] = {};
 
 	cout << "Hi"<< endl;
@@ -72,18 +82,18 @@ int main(int argc, char* argv[])
 	while (1){
 
 
-		///*													This is the original texting version of the app.
+		/*													This is the original texting version of the app.
 		cout << ">  ";
 		cin >> firstWord;
 		cin.getline(input, MAX_RESPONSE_LENGTH);
-		//*/
+		*/
 
-		//char* firstWord = getVoiceInput();			// Uncomment this out for voice
+		char *firstWord = GetVoiceInput2ndAttempt();
 
 
 		char toSend[256] = {};
 		strcat_s(toSend, firstWord);
-		strcat_s(toSend, input);						// Don't Know why this was causing issues.  //Needed for Texting though
+		//strcat_s(toSend, input);						// Don't Know why this was causing issues.  //Needed for Texting though
 
 		char *output = getAIResponse(toSend);
 		char output_s[MAX_RESPONSE_LENGTH] = {};

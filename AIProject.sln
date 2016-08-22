@@ -15,6 +15,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "sreco", "sreco\sreco.vbproj
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "get_speech", "get_speech\get_speech.vbproj", "{0967251B-2F1E-4780-8C9B-081C4794B9E2}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "get_speech_diag", "get_speech_diag\get_speech_diag.vbproj", "{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,16 @@ Global
 		{0967251B-2F1E-4780-8C9B-081C4794B9E2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0967251B-2F1E-4780-8C9B-081C4794B9E2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0967251B-2F1E-4780-8C9B-081C4794B9E2}.Release|Win32.ActiveCfg = Release|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
