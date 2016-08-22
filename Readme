@@ -1,0 +1,8 @@
+To Run
+1.  Build these projects:
+  A.  AIProject
+  B.  Together
+  C.  exec_vb
+  D.  get_speech_diag
+  
+2.  Ensure they are all in the same folder and run together.exe
