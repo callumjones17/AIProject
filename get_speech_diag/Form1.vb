@@ -16,7 +16,7 @@ Public Class Form1
 
         'Dim colorsList As New Recognition.SrgsGrammar.SrgsOneOf("red", "green", "blue", "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "over", "hello")
         'Dim numberList As New Recognition.SrgsGrammar.SrgsOneOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
-        Dim aiRuleList As New Recognition.SrgsGrammar.SrgsOneOf("send", "clear", "hi", "you", "red")
+        Dim aiRuleList As New Recognition.SrgsGrammar.SrgsOneOf("send", "clear", "hi", "you", "red", "are", "me")
 
         colorRule.Add(aiRuleList)
         'numberRule.Add(numberList)

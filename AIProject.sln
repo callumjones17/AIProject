@@ -17,6 +17,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "get_speech", "get_speech\ge
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "get_speech_diag", "get_speech_diag\get_speech_diag.vbproj", "{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ai_speak", "ai_speak\ai_speak.vbproj", "{A1E572A0-C00D-45AE-B286-79C966E7D7E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,16 @@ Global
 		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DFF25C45-A741-4AE3-85CE-689D6A68CEBA}.Release|Win32.ActiveCfg = Release|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A1E572A0-C00D-45AE-B286-79C966E7D7E0}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
