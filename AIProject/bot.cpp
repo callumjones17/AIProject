@@ -6,6 +6,11 @@
 
 using namespace std;
 
+
+char *espeakCommand = "espeak - ven + mf4";
+char *vbSpeakCommand = "ai_speak ";
+
+
 bot::bot()
 {
 }
@@ -131,7 +136,9 @@ int bot::open(char input[], int length){
 
 
 int bot::readOutLoud(char toRead[]){
-	char *command = "espeak -ven+mf4 ";
+	//char *command = "espeak -ven+mf4 ";
+	//char *command = espeakCommand;
+	char *command = vbSpeakCommand;
 	char command_to_send[256] = {};
 	strcat_s(command_to_send, command);
 	strcat_s(command_to_send, "\"");
